@@ -78,7 +78,7 @@ export class CartService {
 
   removeFromCart(item: CartItem) {
     const filtered = this.cart.value.items.filter((el) => {
-      el.id !== item.id;
+      return el.id !== item.id;
     });
 
     this.cart.next({ items: filtered });
