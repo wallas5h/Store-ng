@@ -12,14 +12,7 @@ export class ProductBoxComponent implements OnInit {
   ngOnInit(): void {}
 
   @Input() fullWidthMode = false;
-  product: Product | undefined = {
-    id: 1,
-    title: "Snickers",
-    price: 150,
-    category: "shoes",
-    description: "Nice shoe for every day",
-    image: "https://via.placeholder.com/150",
-  };
+  @Input() product: Product | undefined;
   @Output() addToCart = new EventEmitter();
 
   onAddToCart() {
