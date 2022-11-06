@@ -1,0 +1,26 @@
+<mat-card *ngIf="product" [ngClass]="{'text-center': !fullWidthMode}">
+  <div [ngClass]="{'flex ': fullWidthMode}">
+    <img
+      src="{{product.image}}"
+      alt=""
+      class="mx-auto"
+      [ngClass]="{'h-[200px]':!fullWidthMode, 'h-[360px]':fullWidthMode}"
+    />
+    <div
+      class="w-full basis-full"
+      [ngClass]="{'px-8 flex flex-col justify-between': fullWidthMode}"
+    >
+      <div class="mt-3">
+        <h3>{{product.category}}</h3>
+        <p class="truncate hover:whitespace-normal">{{product.title}}</p>
+        <p *ngIf="fullWidthMode">{{product.description}}</p>
+      </div>
+      <div class="flex justify-between">
+        <span class="text-red-500">{{ product.price| currency}}</span>
+        <button class="px-3" (click)="onAddToCart()">
+          <mat-icon class="text-gray-400">shopping_cart</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</mat-card>

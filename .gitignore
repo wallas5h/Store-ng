@@ -8,6 +8,10 @@
 
 # Node
 /node_modules
+/server/node_modules
+/server/.env
+/server/config/stripe.config.ts
+.env
 npm-debug.log
 yarn-error.log
 
