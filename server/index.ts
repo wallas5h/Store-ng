@@ -8,7 +8,7 @@ import { config } from "./config/config";
 import { checkoutRouter } from "./routes/checkoutRouter";
 require("dotenv").config();
 
-const { PORT = 3002 } = process.env;
+const { PORT = 3001 } = process.env;
 
 const corsOptions = {
   origin: config.corsOrigin,
